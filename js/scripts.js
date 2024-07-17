@@ -11,30 +11,20 @@ console.log(myImg);
 
 const container = document.querySelector('.container');
 
-
-container.innerHTML += `
-<div class="img-container active">
-   <img src="${myImg[0]}">
-</div>
+for(let i = 0; i < myImg.length; i++){
+    container.innerHTML += `
 <div class="img-container">
-   <img src="${myImg[1]}">
+   <img src="${myImg[i]}">
 </div>
-<div class="img-container">
-   <img src="${myImg[2]}">
-</div>
-<div class="img-container">
-   <img src="${myImg[3]}">
-</div>
-<div class="img-container">
-   <img src="${myImg[4]}">
-</div>
-
 `   
-
 const imgContainer = document.getElementsByClassName('img-container');
 console.log(imgContainer);
 
 let active = 0;
+
+if(myImg[active]){
+    imgContainer[active].classList.add('active');
+}
 
 const btn = document.querySelector('.down');
 btn.addEventListener('click', function(){
@@ -74,6 +64,10 @@ btntop.addEventListener('click', function(){
         imgContainer[active].classList.add('active'); 
     }  
 });
+
+}
+
+
     
 
 
