@@ -17,6 +17,8 @@ for(let i = 0; i < myImg.length; i++){
    <img src="${myImg[i]}">
 </div>
 `   
+}
+
 const imgContainer = document.getElementsByClassName('img-container');
 console.log(imgContainer);
 
@@ -64,9 +66,6 @@ btntop.addEventListener('click', function(){
         imgContainer[active].classList.add('active'); 
     }  
 });
-
-}
-
 
     
 
